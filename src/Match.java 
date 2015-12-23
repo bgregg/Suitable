@@ -1,0 +1,32 @@
+/**
+	Match matches the occasion with the proper attire needed for an occasion
+*/
+import java.util.*;
+
+class Match {
+
+	public static Hashtable MatchBoard = new Hashtable();
+	public static Enumberation situation;
+	public static String attire;
+	
+	//takes in the text file with all the corresponding dress codes to 
+	//situations and puts it into a hashtable
+	public static void readInFile(File f, Hashtable h){
+		String[] s = new String[2];
+		for(String line: File.readAllLines(Paths.get(f))){
+			s = line.split("; ");
+			h.put(s[0], s[1]);
+		}
+	}
+
+	public static String Match(String s, File f){
+		readInFile(f, Matchboard);
+		String output = Matchboard.get(s);
+		if(output != null){
+			return output;
+		}
+		else{
+			return "This situation is not in our system";
+		}
+	}
+}

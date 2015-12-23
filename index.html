@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Suitable</title>
+	</head>
+	<body>
+
+		<header>
+			<h1>Suitable</h1>
+			<nav></nav>
+		</header>
+
+		<div id="firstQuestion">
+			<p>What are you going to?</p>
+			<select name "firstQuestion" onchange="javascript:handleSelect(this)">
+				<option value="index">Select an option</option>
+				<option value="interview">Interview</option>
+				<option value="date">Date</option>
+				<option value="event">Event</option>
+				<option value="outWithFriends">Out with Friends</a></option>
+				<option value="activity">Activity</option>
+			</select>
+			<script type="text/javascript">
+			function handleSelect(x){
+				window.location = x.value+".html"
+			}
+			</script>
+		</div>
+
+
+		<footer>
+
+
+
+		</footer>
+
+	</body>
+</html>
